@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Shuffle</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card text-center">
+            <div class="card-body">
+                <h1 class="card-title mb-4"></h1>
+                <button id="shuffleButton" class="btn btn-primary mb-4">Shuffle Teams</button>
+                <div class="row">
+                    <!-- Team A -->
+                    <div class="col-md-6" id="teamA">
+                        <div class="card bg-dark text-white">
+                            <div class="card-body">
+                                <h2 class="card-title">TEAM A</h2>
+                                <ul id="teamAList" class="list-group list-group-flush"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team B -->
+                    <div class="col-md-6" id="teamB">
+                        <div class="card bg-dark text-white">
+                            <div class="card-body">
+                                <h2 class="card-title">TEAM B</h2>
+                                <ul id="teamBList" class="list-group list-group-flush"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

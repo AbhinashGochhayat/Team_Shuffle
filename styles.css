@@ -1,0 +1,62 @@
+body {
+    background-image: url('https://r4.wallpaperflare.com/wallpaper/263/296/931/call-of-duty-modern-warfare-ii-call-of-duty-4k-men-mask-hd-wallpaper-98e65d8810e0dc28703cb1bef8a2249a.jpg'); /* Replace 'your-image.jpg' with your image path */
+    background-size: cover; /* or cover or a specific percentage, based on your needs */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent container to make the content readable */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: transparent; /* Makes the card fully transparent */
+    border: none; /* Removes the card border */
+}
+
+.card-body {
+    background-color: transparent; /* Fully transparent background for the card body */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* White text to ensure readability */
+}
+
+button {
+    font-size: 18px;
+}
+
+/* Team A specific styles */
+#teamA .card-title,
+#teamAList .list-group-item {
+    color: #007bff; /* Blue color for Team A text */
+}
+
+/* Team B specific styles */
+#teamB .card-title,
+#teamBList .list-group-item {
+    color: #ff0000; /* Red color for Team B text */
+}
+
+.list-group-item {
+    background-color: transparent; /* Transparent background for list items */
+    border: none; /* Removes the borders for list items */
+    font-size: 20px;
+    padding: 10px 15px;
+    font-weight: bold; /* Makes the player names bold */
+}
