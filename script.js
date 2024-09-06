@@ -1,44 +1,55 @@
- // Initialize the array with player names
-const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04OP', 'STAR_LORD', 'BLASTERBD2'];
+  // Initialize the array with player names
+const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04', 'STAR_LORD', 'BLASTERBD2'];
 
 document.getElementById('shuffleButton').addEventListener('click', shuffleTeams);
 
 function shuffleTeams() {
-    // Initialize TEAM_A as an empty array
     let TEAM_A = [];
+    let TEAM_B = [];
 
-    // Loop until TEAM_A has 3 members
-    while (TEAM_A.length != 3) {
-        // Generate a random index between 0 and 5
-        let p = Math.floor(Math.random() * arr.length);
-
-        // Check if the randomly chosen player is not already in TEAM_A
-        if (!TEAM_A.includes(arr[p])) {
-            // If not, add the player to TEAM_A
-            TEAM_A.push(arr[p]);
+    // Ensure that either ST3LiOS and STAR_LORD are in the same team or STAR_LORD and BLASTERBD2 are in the same team.
+    while (true) {
+        TEAM_A = [];
+        
+        // Randomly assign players to TEAM_A until it has 3 members
+        while (TEAM_A.length < 3) {
+            let p = Math.floor(Math.random() * arr.length);
+            if (!TEAM_A.includes(arr[p])) {
+                TEAM_A.push(arr[p]);
+            }
+        }
+        
+        // Assign the remaining players to TEAM_B
+        TEAM_B = arr.filter(player => !TEAM_A.includes(player));
+        
+        // Check if the condition is met
+        if ((TEAM_A.includes('ST3LiOS') && TEAM_A.includes('STAR_LORD')) || 
+            (TEAM_A.includes('STAR_LORD') && TEAM_A.includes('BLASTERBD2'))) {
+            break; // Exit the loop if the condition is met
         }
     }
 
-    // Initialize TEAM_B with members not in TEAM_A
-    let TEAM_B = arr.filter(player => !TEAM_A.includes(player));
-
-    // Display TEAM_A in the UI
+    // Display TEAM_A in the UI one by one
     const teamAList = document.getElementById('teamAList');
     teamAList.innerHTML = '';
-    TEAM_A.forEach(player => {
-        let li = document.createElement('li');
-        li.textContent = player;
-        li.classList.add('list-group-item');
-        teamAList.appendChild(li);
+    TEAM_A.forEach((player, index) => {
+        setTimeout(() => {
+            let li = document.createElement('li');
+            li.textContent = player;
+            li.classList.add('list-group-item');
+            teamAList.appendChild(li);
+        }, index * 500); // Delay each item by 500ms multiplied by its index
     });
 
-    // Display TEAM_B in the UI
+    // Display TEAM_B in the UI one by one
     const teamBList = document.getElementById('teamBList');
     teamBList.innerHTML = '';
-    TEAM_B.forEach(player => {
-        let li = document.createElement('li');
-        li.textContent = player;
-        li.classList.add('list-group-item');
-        teamBList.appendChild(li);
+    TEAM_B.forEach((player, index) => {
+        setTimeout(() => {
+            let li = document.createElement('li');
+            li.textContent = player;
+            li.classList.add('list-group-item');
+            teamBList.appendChild(li);
+        }, (TEAM_A.length + index) * 500); // Delay each item by 500ms after TEAM_A items
     });
 }
