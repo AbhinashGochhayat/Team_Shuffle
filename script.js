@@ -1,5 +1,5 @@
-  // Initialize the array with player names
-const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04', 'STAR_LORD', 'BLASTERBD2'];
+ // Initialize the array with player names, including Pratham and AnantLuftWaffe
+const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04OP', 'STAR_LORD', 'BLASTERBD2', 'Pratham', 'AnantLuftWaffe'];
 
 document.getElementById('shuffleButton').addEventListener('click', shuffleTeams);
 
@@ -11,8 +11,8 @@ function shuffleTeams() {
     while (true) {
         TEAM_A = [];
         
-        // Randomly assign players to TEAM_A until it has 3 members
-        while (TEAM_A.length < 3) {
+        // Randomly assign players to TEAM_A until it has 4 members (adjusted for 8 total players)
+        while (TEAM_A.length < 4) {
             let p = Math.floor(Math.random() * arr.length);
             if (!TEAM_A.includes(arr[p])) {
                 TEAM_A.push(arr[p]);
