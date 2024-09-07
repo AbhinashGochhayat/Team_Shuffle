@@ -1,5 +1,5 @@
  body {
-    background-image: url('https://wallpapercave.com/wp/Pzb3zCA.jpg'); /* Replace 'your-image.png' with the path to your PNG file */
+    background-image: url('your-image.png'); /* Replace 'your-image.png' with the path to your PNG file */
     background-size: cover; /* Scale the image to cover the entire screen */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
