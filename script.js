@@ -1,5 +1,5 @@
  // Initialize the array with player names, including Pratham and AnantLuftWaffe
-const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04OP', 'STAR_LORD', 'BLASTERBD2', 'Pratham', 'AnantLuftWaffe'];
+const arr = ['ST3LiOS', 'IRONMAN_AG', 'D_DEVIL', 'ABHISHEK@04', 'STAR_LORD', 'BLASTERBD2', 'Pratham', 'AnantLuftWaffe'];
 
 document.getElementById('shuffleButton').addEventListener('click', shuffleTeams);
 
